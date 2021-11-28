@@ -1,0 +1,211 @@
+<div class="card card-4">
+  <div class="card-body">
+    <ul class="tab-list">
+      <li class="tab-list__item active">
+        <a class="tab-list__link" href="#tab1" data-toggle="tab">hotels</a>
+      </li>
+      <li class="tab-list__item">
+        <a class="tab-list__link" href="#tab2" data-toggle="tab">car</a>
+      </li>
+      <li class="tab-list__item">
+        <a class="tab-list__link" href="#tab3" data-toggle="tab">flight</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">
+        <form method="POST" action="#">
+          <div class="input-group input-group-big">
+            <label class="label">where:</label>
+            <input class="input--style-1" type="text" name="address" placeholder="City, region or specific hotel" required="required">
+            <i class="zmdi zmdi-search input-group-symbol"></i>
+          </div>
+          <div class="row row-space">
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">check-in:</label>
+                <input class="input--style-1" type="text" name="check-in" placeholder="mm/dd/yyyy" id="input-start">
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">check-out:</label>
+                <input class="input--style-1" type="text" name="check-out" placeholder="mm/dd/yyyy" id="input-end">
+              </div>
+            </div>
+          </div>
+          <div class="row row-space">
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">travellers:</label>
+                <div class="input-group-icon" id="js-select-special">
+                  <input class="input--style-1 input--style-1-small" type="text" name="traveller" value="1 Adult, 0 Children, 1 Room" disabled="disabled" id="info">
+                  <i class="zmdi zmdi-chevron-down input-icon"></i>
+                </div>
+                <div class="dropdown-select">
+                  <ul class="list-room">
+                    <li class="list-room__item">
+                      <span class="list-room__name">Room 1</span>
+                      <ul class="list-person">
+                        <li class="list-person__item">
+                          <span class="name">Adults</span>
+                          <div class="quantity quantity1">
+                            <span class="minus">-</span>
+                            <input class="inputQty" type="number" min="0" value="1">
+                            <span class="plus">+</span>
+                          </div>
+                        </li>
+                        <li class="list-person__item">
+                          <span class="name">Children</span>
+                          <div class="quantity quantity2">
+                            <span class="minus">-</span>
+                            <input class="inputQty" type="number" min="0" value="0">
+                            <span class="plus">+</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="list-room__footer">
+                    <a href="#" id="btn-add-room">Add room</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <button class="btn-submit" type="submit">search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="tab-pane" id="tab2">
+        <form method="POST" action="#">
+          <div class="input-group input-group-big">
+            <label class="label">location:</label>
+            <input class="input--style-1" type="text" name="location" placeholder="Destination, hotel name" required="required">
+            <i class="zmdi zmdi-search input-group-symbol"></i>
+          </div>
+          <div class="row row-space">
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">driver age:</label>
+                <div class="rs-select2 js-select-simple select--no-search">
+                  <select name="driver-age" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                    <option>23</option>
+                    <option>24</option>
+                    <option selected="selected">25</option>
+                    <option>26</option>
+                  </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-driver-age-4e-container"><span class="select2-selection__rendered" id="select2-driver-age-4e-container" title="25">25</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  <div class="select-dropdown"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">car group:</label>
+                <div class="rs-select2 js-select-simple select--no-search">
+                  <select name="car-group" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                    <option selected="selected">Group S-car</option>
+                    <option>Group 1</option>
+                    <option>Group 2</option>
+                    <option>Group 3</option>
+                  </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-car-group-sy-container"><span class="select2-selection__rendered" id="select2-car-group-sy-container" title="Group S-car">Group S-car</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  <div class="select-dropdown"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-space">
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">pick up:</label>
+                <input class="input--style-1 js-single-datepicker" type="text" name="pickup" placeholder="mm/dd/yyyy" data-drop="1">
+                <div class="dropdown-datepicker" id="dropdown-datepicker1"><div class="daterangepicker dropdown-menu ltr single opensleft"><div class="calendar left single" style="display: block;"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_start" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"></div></div><div class="calendar right" style="display: none;"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_end" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"></div></div><div class="ranges" style="display: none;"><div class="range_inputs"><button class="applyBtn btn btn-sm btn-success" disabled="disabled" type="button">Apply</button> <button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button></div></div></div></div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">time:</label>
+                <div class="rs-select2 js-select-simple select--no-search">
+                  <select name="time-pickup" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                    <option selected="selected">10:00 AM</option>
+                    <option>5:00 AM</option>
+                    <option>6:00 AM</option>
+                    <option>7:00 AM</option>
+                  </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-time-pickup-o5-container"><span class="select2-selection__rendered" id="select2-time-pickup-o5-container" title="10:00 AM">10:00 AM</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  <div class="select-dropdown"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row row-space">
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">drop off:</label>
+                <input class="input--style-1 js-single-datepicker" type="text" name="dropoff" placeholder="mm/dd/yyyy" data-drop="2">
+                <div class="dropdown-datepicker" id="dropdown-datepicker2"><div class="daterangepicker dropdown-menu ltr single opensleft"><div class="calendar left single" style="display: block;"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_start" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"></div></div><div class="calendar right" style="display: none;"><div class="daterangepicker_input"><input class="input-mini form-control" type="text" name="daterangepicker_end" value="" style="display: none;"><i class="fa fa-calendar glyphicon glyphicon-calendar" style="display: none;"></i><div class="calendar-time" style="display: none;"><div></div><i class="fa fa-clock-o glyphicon glyphicon-time"></i></div></div><div class="calendar-table"></div></div><div class="ranges" style="display: none;"><div class="range_inputs"><button class="applyBtn btn btn-sm btn-success" disabled="disabled" type="button">Apply</button> <button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button></div></div></div></div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">time:</label>
+                <div class="rs-select2 js-select-simple select--no-search">
+                  <select name="time-dropoff" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true">
+                    <option selected="selected">10:00 AM</option>
+                    <option>5:00 AM</option>
+                    <option>6:00 AM</option>
+                    <option>7:00 AM</option>
+                  </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-time-dropoff-qh-container"><span class="select2-selection__rendered" id="select2-time-dropoff-qh-container" title="10:00 AM">10:00 AM</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  <div class="select-dropdown"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn-submit m-t-0" type="submit">search</button>
+        </form>
+      </div>
+      <div class="tab-pane" id="tab3">
+        <form method="POST" action="#">
+          <div class="input-group input-group-big">
+            <label class="label">origin:</label>
+            <input class="input--style-1" type="text" name="origin" placeholder="City or airport" required="required">
+            <i class="zmdi zmdi-search input-group-symbol"></i>
+          </div>
+          <div class="input-group input-group-big">
+            <label class="label">destination:</label>
+            <input class="input--style-1" type="text" name="destination" placeholder="City or airport" required="required">
+            <i class="zmdi zmdi-search input-group-symbol"></i>
+          </div>
+          <div class="row row-space">
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">Departing:</label>
+                <input class="input--style-1" type="text" name="check-in" placeholder="mm/dd/yyyy" id="input-start-2">
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="input-group">
+                <label class="label">returning:</label>
+                <input class="input--style-1" type="text" name="check-out" placeholder="mm/dd/yyyy" id="input-end-2">
+              </div>
+            </div>
+          </div>
+          <div class="radio-row">
+            <label class="radio-container m-r-45">First Class
+              <input type="radio" name="class">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-container m-r-45">Business
+              <input type="radio" name="class">
+              <span class="radio-checkmark"></span>
+            </label>
+            <label class="radio-container">Economy
+              <input type="radio" checked="checked" name="class">
+              <span class="radio-checkmark"></span>
+            </label>
+          </div>
+          <button class="btn-submit m-t-35" type="submit">search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
