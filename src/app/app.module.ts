@@ -2,19 +2,30 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SearchComponent} from "./components/search/search.component";
 import {HttpClientModule} from "@angular/common/http";
+import {CarsComponent} from './components/cars/cars.component';
+import {RouterModule, Routes} from "@angular/router";
+
+
+const appRoutes: Routes = [
+  {path: 'cars', component: CarsComponent},
+  {path: 'search', component: SearchComponent}
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,61 +14,70 @@
         <div class="col-md-4 col-md-pull-7">
           <div class="booking-form">
             <form>
-              <div class="form-group">
-                <span class="form-label">Your Destination</span>
-                <input class="form-control" type="text" placeholder="Enter a destination or hotel name">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Make</span>
+                    <select class="form-control" [(ngModel)]="searchCriteria.brand" name="brand">
+                      <option *ngFor="let make of brands" [ngValue]="make">
+                        {{make}}
+                      </option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <span class="form-label">Model</span>
+                    <select class="form-control" [(ngModel)]="searchCriteria.model" name="model">
+                      <option *ngFor="let model of models" [ngValue]="model">
+                        {{model}}
+                      </option>
+                    </select>
+                    <span class="select-arrow"></span>
+                  </div>
+                </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <span class="form-label">Check In</span>
-                    <input class="form-control" type="date" required>
+                    <span class="form-label">From year</span>
+                    <select class="form-control" [(ngModel)]="searchCriteria.fromYear" name="fromYear">
+                      <option *ngFor="let year of years" [ngValue]="year">
+                        {{year}}
+                      </option>
+                    </select>
+                    <span class="select-arrow"></span>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <span class="form-label">Check out</span>
-                    <input class="form-control" type="date" required>
+                    <span class="form-label">To year</span>
+                    <select class="form-control" [(ngModel)]="searchCriteria.toYear" name="toYear">
+                      <option *ngFor="let year of years" [ngValue]="year">
+                        {{year}}
+                      </option>
+                    </select>
+                    <span class="select-arrow"></span>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <div class="form-group">
-                    <span class="form-label">Rooms</span>
-                    <select class="form-control">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                    <span class="select-arrow"></span>
+                    <span class="form-label">From price</span>
+                    <input class="form-control" [(ngModel)]="searchCriteria.fromPrice" type="number" name="fromPrice">
                   </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <div class="form-group">
-                    <span class="form-label">Adults</span>
-                    <select class="form-control">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                    </select>
-                    <span class="select-arrow"></span>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <div class="form-group">
-                    <span class="form-label">Children</span>
-                    <select class="form-control">
-                      <option>0</option>
-                      <option>1</option>
-                      <option>2</option>
-                    </select>
-                    <span class="select-arrow"></span>
+                    <span class="form-label">To price</span>
+                    <input class="form-control" [(ngModel)]="searchCriteria.toPrice" type="number" name="toPrice">
                   </div>
                 </div>
               </div>
               <div class="form-btn">
-                <button class="submit-btn">Check availability</button>
+                <button class="submit-btn" (click)="search()">Search</button>
               </div>
             </form>
           </div>

@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Car} from "../../models/car";
 import {CarRemoteService} from "../../services/remote/car.remote.service";
+import {SearchCriteria} from "../../models/searchCriteria";
+import {Router} from "@angular/router";
+import {CarService} from "../../services/cars.service";
 
 @Component({
   selector: 'app-search',
@@ -8,30 +10,28 @@ import {CarRemoteService} from "../../services/remote/car.remote.service";
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  cars: Car[] = [];
-  makes: string[] = [];
-  models: string[] = [];
 
-  constructor(private carRemoteService: CarRemoteService) {
+  brands: string[] = [];
+  models: string[] = [];
+  years: number[] = [];
+  searchCriteria: SearchCriteria = new SearchCriteria();
+
+  constructor(private carRemoteService: CarRemoteService, private router: Router, private carService: CarService) {
   }
 
   ngOnInit(): void {
-    this.getCars();
   }
 
-  private getCars() {
-    this.carRemoteService.getCars().subscribe(
-      (cars: Car[]) => {
-        this.cars = cars;
-      }
-    )
-  }
-
-  public getModels(make: string) {
+  getModels(make: string) {
     this.carRemoteService.getModels(make).subscribe(
       (models: string[]) => {
         this.models = models;
       }
     )
+  }
+
+  search() {
+    this.carService.filterCars(this.searchCriteria);
+    this.router.navigate([`/cars`]);
   }
 }
