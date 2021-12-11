@@ -1,6 +1,6 @@
 export class SearchCriteria {
-  brand?: string;
-  model?: string;
+  make?: string;
+  modelId?: string;
   fromYear?: number;
   toYear?: number;
   fromPrice?: number;

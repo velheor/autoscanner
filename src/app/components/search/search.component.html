@@ -18,9 +18,9 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <span class="form-label">Make</span>
-                    <select class="form-control" [(ngModel)]="searchCriteria.brand" name="brand">
-                      <option *ngFor="let make of brands" [ngValue]="make">
-                        {{make}}
+                    <select class="form-control" [(ngModel)]="searchCriteria.make" name="brand">
+                      <option>
+                        Audi
                       </option>
                     </select>
                     <span class="select-arrow"></span>
@@ -29,9 +29,9 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <span class="form-label">Model</span>
-                    <select class="form-control" [(ngModel)]="searchCriteria.model" name="model">
-                      <option *ngFor="let model of models" [ngValue]="model">
-                        {{model}}
+                    <select class="form-control" [(ngModel)]="searchCriteria.modelId" name="model">
+                      <option>
+                        476
                       </option>
                     </select>
                     <span class="select-arrow"></span>
@@ -43,8 +43,8 @@
                   <div class="form-group">
                     <span class="form-label">From year</span>
                     <select class="form-control" [(ngModel)]="searchCriteria.fromYear" name="fromYear">
-                      <option *ngFor="let year of years" [ngValue]="year">
-                        {{year}}
+                      <option>
+                        1000
                       </option>
                     </select>
                     <span class="select-arrow"></span>
@@ -54,8 +54,8 @@
                   <div class="form-group">
                     <span class="form-label">To year</span>
                     <select class="form-control" [(ngModel)]="searchCriteria.toYear" name="toYear">
-                      <option *ngFor="let year of years" [ngValue]="year">
-                        {{year}}
+                      <option>
+                        2020
                       </option>
                     </select>
                     <span class="select-arrow"></span>

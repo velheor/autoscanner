@@ -9,7 +9,7 @@ import {environment} from "../../../environments/environment";
   providedIn: 'root'
 })
 export class CarRemoteService {
-  private CAR_URL = environment.apiBaseUrl;
+  private CAR_URL = `${environment.apiBaseUrl}/api/cars`;
 
   constructor(private http: HttpClient) {
   }
@@ -19,7 +19,7 @@ export class CarRemoteService {
   }
 
   filterCars(criteria: SearchCriteria): Observable<Car[]> {
-    return this.http.post<Car[]>(`${this.CAR_URL}/filter`, criteria);
+    return this.http.post<Car[]>(this.CAR_URL, criteria);
   }
 
   getModels(make: string): Observable<string[]> {
