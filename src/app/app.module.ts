@@ -1,35 +1,18 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppComponent} from './app.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {SearchComponent} from "./components/search/search.component";
-import {HttpClientModule} from "@angular/common/http";
-import {CarsComponent} from './components/cars/cars.component';
-import {RouterModule, Routes} from "@angular/router";
-
-
-const appRoutes: Routes = [
-  {path: 'cars', component: CarsComponent},
-  {path: 'search', component: SearchComponent}
-];
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SearchComponent,
-    CarsComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
-  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
