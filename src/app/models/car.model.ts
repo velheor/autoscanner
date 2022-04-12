@@ -6,13 +6,3 @@ export interface Car {
   link: string;
   imageLink: string;
 }
-
-export class SearchCriteria {
-  make?: string;
-  modelId?: string;
-  fromYear?: number;
-  toYear?: number;
-  fromPrice?: number;
-  toPrice?: number;
-}
-
