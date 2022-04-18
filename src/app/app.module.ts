@@ -7,12 +7,14 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpErrorsInterceptor } from './interceptors/http-errors.interceptor';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SearchCarComponent } from './components/search-car/search-car.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    SearchCarComponent
   ],
   imports: [
     BrowserModule,
