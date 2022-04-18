@@ -11,18 +11,23 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#!">Search Cars</a>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['cars']" class="nav-link">Search Cars</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!">Value Your Car</a>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['value']" class="nav-link">Value Your Car</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!"><i class="bi bi-arrow-left-right" style="font-size: large"> Compared
-            Cars</i></a>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['compare']" class="nav-link">
+            <i class="bi bi-arrow-left-right"></i>
+            Compared Cars
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!"><i class="bi bi-person"></i> View Saved Cars</a>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['saved']" class="nav-link">
+            <i class="bi bi-person"></i>
+            View Saved Cars
+          </a>
         </li>
       </ul>
       <button class="btn btn-primary navbar-btn" href="#!">Get Approved</button>
