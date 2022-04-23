@@ -9,7 +9,7 @@
                 <label class="mb-2 fw-light">Make:</label>
                 <select (change)='onSelectMake()' [(ngModel)]="selectedMake" class="form-select">
                   <option *ngFor="let make of makes" [ngValue]="make">
-                    {{make.brand}}
+                    {{make.name}}
                   </option>
                 </select>
               </div>
@@ -20,7 +20,7 @@
                 <label class="mb-2 fw-light">Model:</label>
                 <select [(ngModel)]="selectedModel" class="form-select">
                   <option *ngFor="let model of models" [ngValue]="model">
-                    {{model.model}}
+                    {{model.name}}
                   </option>
                 </select>
               </div>
@@ -131,7 +131,7 @@
         <div class="card-body">
           <div class="row mb-2">
             <div class="col-md-8">
-              <h5 class="link-primary" href="#"><a>{{car.year}} {{car.brand}} {{car.model}}</a></h5>
+              <h5 class="link-primary" href="#"><a>{{car.year}} {{car.make}} {{car.model}}</a></h5>
             </div>
             <div class="col-md-4 d-flex justify-content-md-end justify-content-sm-start">
               <h4 style="white-space: nowrap; font-style: italic; font-weight: bold">${{car.price}}</h4>

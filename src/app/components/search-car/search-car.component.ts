@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarHttpService } from '../../services/http/car-http.service';
-import { Brand } from '../../models/make.model';
+import { Make } from '../../models/make.model';
 import { Model } from '../../models/model.model';
 import { Car } from '../../models/car.model';
 
@@ -11,15 +11,14 @@ import { Car } from '../../models/car.model';
 })
 export class SearchCarComponent implements OnInit {
 
-  selectedMake: Brand = {
-    brand: '',
-    model: []
+  selectedMake: Make = {
+    name: '',
+    models: []
   };
   selectedModel: Model = {
-    id: 0,
-    model: ''
+    name: ''
   };
-  makes: Brand[] = [];
+  makes: Make[] = [];
   models: Model[] = [];
   cars: Car[] = [];
 
@@ -34,13 +33,13 @@ export class SearchCarComponent implements OnInit {
 
   onSelectMake() {
     console.log(this.selectedMake);
-    this.models = this.selectedMake.model;
+    this.models = this.selectedMake.models;
   }
 
   filterCars() {
     this.carHttpService.filterCars({
-      brand: this.selectedMake.brand,
-      model: this.selectedModel.model,
+      brand: this.selectedMake.name,
+      model: this.selectedModel.name,
     }).subscribe(cars => {
       this.cars = cars;
     });

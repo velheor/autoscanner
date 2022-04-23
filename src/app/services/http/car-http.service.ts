@@ -4,7 +4,7 @@ import { Car } from '../../models/car.model';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { SearchCriteria, Sort } from '../../models/search.model';
-import { Brand } from '../../models/make.model';
+import { Make } from '../../models/make.model';
 
 @Injectable({
   providedIn: 'root'
@@ -31,8 +31,8 @@ export class CarHttpService {
     return this.http.post<Car[]>(`${this.CAR_URL}/cars/find`, criteria);
   }
 
-  getMakes(): Observable<Brand[]> {
-    return this.http.get<Brand[]>(`${this.CAR_URL}/brands`);
+  getMakes(): Observable<Make[]> {
+    return this.http.get<Make[]>(`${this.CAR_URL}/brands`);
   }
 
   getModels(make: string): Observable<string[]> {

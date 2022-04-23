@@ -1,6 +1,6 @@
 import { Model } from './model.model';
 
-export interface Brand {
-  brand: string;
-  model: Model[];
+export interface Make {
+  name: string;
+  models: Model[];
 }
