@@ -10,21 +10,21 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto">
+      <ul class="nav navbar-nav ms-auto">
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['cars']" class="nav-link">Search Cars</a>
+          <a [routerLink]="['/cars']" class="nav-link">Search Cars</a>
         </li>
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['value']" class="nav-link">Value Your Car</a>
+          <a [routerLink]="['/value']" class="nav-link">Value Your Car</a>
         </li>
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['compare']" class="nav-link">
+          <a [routerLink]="['/compare']" class="nav-link">
             <i class="bi bi-arrow-left-right"></i>
             Compared Cars
           </a>
         </li>
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['saved']" class="nav-link">
+          <a [routerLink]="['/saved']" class="nav-link">
             <i class="bi bi-person"></i>
             View Saved Cars
           </a>
