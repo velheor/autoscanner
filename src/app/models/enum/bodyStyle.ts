@@ -1,4 +1,4 @@
-enum CarBody {
+enum BodyStyle {
   SUV,
   Coupe,
   Convertible,

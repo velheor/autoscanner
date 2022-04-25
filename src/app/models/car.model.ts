@@ -3,8 +3,8 @@ export interface Car {
   model: string;
   year: number;
   price: number;
-  millage: string;
-  body: string;
+  mileage: string;
+  bodyStyle: BodyStyle;
   link: string;
   imageLink: string;
 }
