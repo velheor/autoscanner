@@ -32,7 +32,7 @@ export class CarHttpService {
   }
 
   getMakes(): Observable<Make[]> {
-    return this.http.get<Make[]>(`${this.CAR_URL}/brands`);
+    return this.http.get<Make[]>(`${this.CAR_URL}/makes`);
   }
 
   getModels(make: string): Observable<string[]> {
