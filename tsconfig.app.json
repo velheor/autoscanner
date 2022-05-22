@@ -8,7 +8,8 @@
   "files": [
     "src/main.ts",
     "src/polyfills.ts",
-    "src/app/models/enum/body-style.ts"
+    "src/app/models/enum/body-style.ts",
+    "src/app/models/enum/fuel-type.ts"
   ],
   "include": [
     "src/**/*.d.ts"

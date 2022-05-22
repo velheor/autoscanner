@@ -5,6 +5,7 @@ export interface Car {
   price: number;
   mileage: string;
   bodyStyle: BodyStyle;
+  fuelType: FuelType;
   link: string;
   imageLink: string;
 }
