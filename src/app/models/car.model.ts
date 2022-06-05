@@ -1,4 +1,5 @@
 export interface Car {
+  engineSize: number;
   make: string;
   model: string;
   year: number;
