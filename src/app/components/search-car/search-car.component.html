@@ -7,7 +7,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
               <div class="form-group">
                 <label class="mb-2 fw-light">Make:</label>
-                <select (change)='onSelectMake()' [(ngModel)]="selectedMake" class="form-select">
+                <select (change)='onSelectMake()' [(ngModel)]="searchCriteria.make" class="form-select">
                   <option *ngFor="let make of makes" [ngValue]="make">
                     {{make.name}}
                   </option>
@@ -18,7 +18,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4">
               <div class="form-group">
                 <label class="mb-2 fw-light">Model:</label>
-                <select [(ngModel)]="selectedModel" class="form-select">
+                <select [(ngModel)]="searchCriteria.model" class="form-select">
                   <option *ngFor="let model of models" [ngValue]="model">
                     {{model.name}}
                   </option>
@@ -30,8 +30,10 @@
               <div class="form-group">
                 <label class="mb-2 fw-light">Price:</label>
                 <div class="input-group">
-                  <input aria-label="From" class="form-control" placeholder="From" type="text">
-                  <input aria-label="To" class="form-control" placeholder="To" type="text">
+                  <input [(ngModel)]="searchCriteria.fromPrice" aria-label="From" class="form-control"
+                         placeholder="From" type="text">
+                  <input [(ngModel)]="searchCriteria.toPrice" aria-label="To" class="form-control" placeholder="To"
+                         type="text">
                 </div>
               </div>
             </div>
@@ -40,17 +42,17 @@
               <div class="form-group">
                 <label class="mb-2 fw-light">Year:</label>
                 <div class="input-group">
-                  <select class="form-select">
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
+                  <select [(ngModel)]="searchCriteria.fromYear" class="form-select">
+                    <option value="0">From year</option>
+                    <option *ngFor="let year of years" [ngValue]="year">
+                      {{year}}
+                    </option>
                   </select>
-                  <select class="form-select">
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
+                  <select [(ngModel)]="searchCriteria.toYear" class="form-select">
+                    <option value="0">To year</option>
+                    <option *ngFor="let year of years" [ngValue]="year">
+                      {{year}}
+                    </option>
                   </select>
                 </div>
               </div>
@@ -60,17 +62,17 @@
               <div class="form-group">
                 <label class="mb-2 fw-light">Engine size:</label>
                 <div class="input-group">
-                  <select class="form-select">
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
+                  <select [(ngModel)]="searchCriteria.fromEngineSize" class="form-select">
+                    <option value="0">From size</option>
+                    <option *ngFor="let engineSize of engineSizes" [ngValue]="engineSize">
+                      {{engineSize}}
+                    </option>
                   </select>
-                  <select class="form-select">
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
-                    <option value="">-- All --</option>
+                  <select [(ngModel)]="searchCriteria.toEngineSize" class="form-select">
+                    <option value="0">To size</option>
+                    <option *ngFor="let engineSize of engineSizes" [ngValue]="engineSize">
+                      {{engineSize}}
+                    </option>
                   </select>
                 </div>
               </div>
