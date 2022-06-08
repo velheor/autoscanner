@@ -29,8 +29,14 @@
             View Saved Cars
           </a>
         </li>
+        <button class="btn btn-primary navbar-btn" href="#!">Get Approved</button>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/login']" class="nav-link bi bi-person" style="font-size: large">
+            Login
+          </a>
+        </li>
       </ul>
-      <button class="btn btn-primary navbar-btn" href="#!">Get Approved</button>
+
     </div>
   </div>
 </nav>

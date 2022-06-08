@@ -9,13 +9,15 @@ import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SearchCarComponent } from './components/search-car/search-car.component';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    SearchCarComponent
+    SearchCarComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
