@@ -11,6 +11,9 @@ import { SearchCarComponent } from './components/search-car/search-car.component
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
+import { CompareComponent } from './components/compare/compare.component';
+import { ValueComponent } from './components/value/value.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { LoginComponent } from './components/login/login.component';
     NavBarComponent,
     SearchCarComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    FavoriteComponent,
+    CompareComponent,
+    ValueComponent
   ],
   imports: [
     BrowserModule,

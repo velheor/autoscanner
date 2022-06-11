@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-2">
+    <div class="row">
+      <img border="white"
+           height="300">
+
+    </div>
+    <div class="row">
+      <i>
+        Price
+      </i>
+    </div>
+    <div class="row">
+      Make
+    </div>
+    <div class="row">
+      Model
+    </div>
+    <div class="row">
+      Year
+    </div>
+  </div>
+  <div *ngFor="let car of cars" class="col-3">
+    <div class="card shadow bg-light">
+      <img alt=""
+           height="300"
+           src="{{car.imageLink}}"
+           width="100%">
+      <div class="card-body">
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h5 class="link-primary" href="#"><a>{{car.year}} {{car.make}} {{car.model}}</a></h5>
+          </div>
+          <div class="col-md-4 d-flex justify-content-md-end justify-content-sm-start">
+            <h4 style="white-space: nowrap; font-style: italic; font-weight: bold">${{car.price}}</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="card-text">
+            <i class="bi bi-speedometer2"> {{car.mileage}} Km &nbsp;&nbsp;&nbsp;</i>
+            <i class="bi bi-gear"> {{car.engineType}} &nbsp;&nbsp;&nbsp;</i>
+            <i class="bi bi-box"> {{car.engineCapacity}}L &nbsp;&nbsp;&nbsp;</i>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row mb-2">
+          <div class="col-md-6 d-flex justify-content-md-center justify-content-start">
+            <button class="border-0 bi bi-arrow-left-right" style="font-size: large"> Compare</button>
+          </div>
+          <div class="col-md-6 d-flex justify-content-md-center justify-content-start">
+            <button class="border-0 bi bi-bookmark" style="font-size: large"> Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

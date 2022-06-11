@@ -1,12 +1,12 @@
 export interface Car {
-  engineSize: number;
   make: string;
   model: string;
+  vehicleType: string;
+  engineType: string;
+  engineCapacity: string;
   year: number;
   price: number;
-  mileage: string;
-  bodyStyle: BodyStyle;
-  fuelType: FuelType;
   link: string;
   imageLink: string;
+  mileage: string;
 }

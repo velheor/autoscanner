@@ -4,6 +4,9 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchCarComponent } from './components/search-car/search-car.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { CompareComponent } from './components/compare/compare.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
+import { ValueComponent } from './components/value/value.component';
 
 const routes: Routes = [
   {
@@ -21,6 +24,18 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'compare',
+    component: CompareComponent
+  },
+  {
+    path: 'favorite',
+    component: FavoriteComponent
+  },
+  {
+    path: 'value',
+    component: ValueComponent
   }
 ];
 

@@ -15,21 +15,22 @@
           <a [routerLink]="['/cars']" class="nav-link">Search Cars</a>
         </li>
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['/value']" class="nav-link">Value Your Car</a>
-        </li>
-        <li [routerLinkActive]="['active']">
           <a [routerLink]="['/compare']" class="nav-link">
             <i class="bi bi-arrow-left-right"></i>
             Compared Cars
           </a>
         </li>
         <li [routerLinkActive]="['active']">
-          <a [routerLink]="['/saved']" class="nav-link">
+          <a [routerLink]="['/favorite']" class="nav-link">
             <i class="bi bi-bookmark"></i>
             View Saved Cars
           </a>
         </li>
-        <button class="btn btn-primary navbar-btn" href="#!">Get Approved</button>
+        <li>
+          <a [routerLink]="['/value']" class="btn btn-primary">
+            Value your car
+          </a>
+        </li>
         <li [routerLinkActive]="['active']">
           <a [routerLink]="['/login']" class="nav-link bi bi-person" style="font-size: large">
             Login
