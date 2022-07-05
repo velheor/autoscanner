@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark py-3 bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Auto Scanner</a>
+    <button aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler"
+            data-bs-target="#navbarSupportedContent"
+            data-bs-toggle="collapse"
+            type="button">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav ms-auto">
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/cars']" class="nav-link">Search Cars</a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/compare']" class="nav-link">
+            <i class="bi bi-arrow-left-right"></i>
+            Compared Cars
+          </a>
+        </li>
+        <li [routerLinkActive]="['active']">
+          <a [routerLink]="['/favorite']" class="nav-link">
+            <i class="bi bi-bookmark"></i>
+            View Saved Cars
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['/value']" class="btn btn-primary">
+            Value your car
+          </a>
+        </li>
+        <li *ngIf="global === ''" [routerLinkActive]="['active']">
+          <a [routerLink]="['/login']" class="nav-link bi bi-person" style="font-size: large">
+            Login
+          </a>
+        </li>
+        <li *ngIf="global !== ''">
+          <a class="nav-link" style="font-size: large">
+            {{global}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

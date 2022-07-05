@@ -1,0 +1,43 @@
+<div class="container py-4">
+  <div class="table-responsive">
+    <table class="table table-striped text-successtable-border border-light">
+      <thead class="border-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"><strong></strong></th>
+        <th scope="col"><strong>Name</strong></th>
+        <th scope="col"><strong>Year</strong></th>
+        <th scope="col"><strong>Price</strong></th>
+        <th scope="col"><strong>Mileage</strong></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let car of cars; let indexOfElement = index;">
+        <td>
+          {{indexOfElement + 1}}
+        </td>
+        <td>
+          <img alt=""
+               height="245"
+               src="{{car.imageLink}}" width="350">
+        </td>
+        <td>
+          <h5 class="link-primary">
+            <a href="{{car.link}}"> {{car.make}} {{car.model}}</a>
+          </h5>
+        </td>
+        <td>{{car.year}}</td>
+        <td>{{car.price}}</td>
+        <td>{{car.mileage}}</td>
+        <td>
+          <button (click)="addToSaved(car)"
+                  [ngClass]="car.isSaved ? 'border-0 transparent; bi bi-bookmark-fill' : 'border-0 bi bi-bookmark'"
+                  class=""
+                  style="font-size: large"> Save
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

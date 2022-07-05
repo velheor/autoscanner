@@ -1,0 +1,50 @@
+<div class="container py-4">
+  <div class="row">
+    <div *ngFor="let car of cars" class="col-xl-4 col-md-6 mb-4">
+      <div class="card shadow bg-light">
+        <div class="card-header">
+          You and {{follower()}} others have saved this vehicle
+        </div>
+        <img alt=""
+             height="300"
+             src="{{car.imageLink}}"
+             width="100%">
+        <div class="card-body">
+          <div class="row mb-2">
+            <div class="col-md-8">
+              <h5 class="link-primary" href="#"><a>{{car.year}} {{car.make}} {{car.model}}</a></h5>
+            </div>
+            <div class="col-md-4 d-flex justify-content-md-end justify-content-sm-start">
+              <h4 style="white-space: nowrap; font-style: italic; font-weight: bold">${{car.price}}</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="card-text">
+              <i class="bi bi-speedometer2"> {{car.mileage}} Km &nbsp;&nbsp;&nbsp;</i>
+              <i class="bi bi-gear"> {{car.engineType}} &nbsp;&nbsp;&nbsp;</i>
+              <i class="bi bi-box"> {{car.engineCapacity}}L &nbsp;&nbsp;&nbsp;</i>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="row mb-2">
+            <div class="col-md-6 d-flex justify-content-md-center justify-content-start">
+              <button
+                (click)="addToCompared(car)"
+                [ngClass]="car.isCompared ? 'border-0 bi bi-arrow-right-circle-fill' : 'border-0 bi bi-arrow-right-circle'"
+                style="font-size: large"> Compare
+              </button>
+            </div>
+            <div class="col-md-6 d-flex justify-content-md-center justify-content-start">
+              <button
+                (click)="setAlert(car)"
+                [ngClass]="car.setAlert ? 'border-0 bi bi-bell-fill' : 'border-0 bi bi bi-bell'"
+                style="font-size: large"> Set alert
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
