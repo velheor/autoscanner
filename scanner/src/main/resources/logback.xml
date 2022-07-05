@@ -20,7 +20,7 @@
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
     </appender>
-    <logger name="by.grsu" additivity="false" level="DEBUG">
+    <logger name="com.autoscanner" additivity="false" level="DEBUG">
         <appender-ref ref="fileAppender"/>
         <appender-ref ref="consoleAppender"/>
     </logger>
